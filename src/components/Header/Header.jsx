@@ -5,6 +5,7 @@ export function Header() {
     <div className="header-container">
       <h2>Greetings!</h2>
       <h1>Alex Cameron</h1>
+      <h3>Software Developer</h3>
       <p>
         Welcome to my portfolio! I am a software engineering graduate student
         fascinated by technology and ready to create impactful software.
