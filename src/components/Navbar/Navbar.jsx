@@ -7,13 +7,13 @@ export function Navbar() {
 
   // Note: Not best practice to directly manipulate DOM in react. Logic rework required.
   useEffect(() => {
+    const root = document.documentElement;
     if (isLight) {
-      //Light mode
-      document.body.style.color = "rgba(0, 0, 0, 0.87)";
-      document.body.style.backgroundColor = "rgb(255, 255, 255)";
+      root.style.setProperty("--text-color", "rgba(0, 0, 0, 0.87)");
+      root.style.setProperty("--bg-color", "rgb(255, 255, 255)");
     } else {
-      document.body.style.backgroundColor = "rgb(17, 17, 17)";
-      document.body.style.color = "rgb(255, 255, 255)";
+      root.style.setProperty("--bg-color", "rgb(17, 17, 17)");
+      root.style.setProperty("--text-color", "rgb(255, 255, 255)");
     }
   }, [isLight]);
 

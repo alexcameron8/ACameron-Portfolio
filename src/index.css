@@ -1,3 +1,5 @@
+@import "./variables.css";
+
 body {
   font-family: Consolas, monaco, monospace;
   margin: 0;
@@ -9,6 +11,8 @@ body {
   /* Dark Mode */
   /* background-color: rgb(17, 17, 17);
   color: rgb(255, 255, 255); */
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
 button {

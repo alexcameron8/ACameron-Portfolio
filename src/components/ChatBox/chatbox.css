@@ -1,4 +1,5 @@
-/* Everything Below is for ChatBox CSS */
+@import "./src/variables.css";
+
 .chat-container {
   /* border: 1px solid black; */
   min-width: 300px;
@@ -63,8 +64,10 @@
 
 .btn-answer {
   border-radius: 1rem;
-  color: white;
-  background-color: #000000;
+  /* color: white;
+  background-color: #000000; */
+  color: var(--text-color);
+  background-color: var(--bg-color);
   padding-inline-start: 0.5rem;
   padding-inline-end: 0.5rem;
   padding-top: 0.2rem;
