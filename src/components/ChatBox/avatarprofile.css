@@ -1,0 +1,27 @@
+.avatar-img {
+  position: relative;
+  height: 100%;
+  border-radius: 3rem;
+  transition: height 0.3s ease, width 0.3s ease;
+}
+.avatar-img.shrink {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  align-items: end;
+}
+
+.avatar-container {
+  height: 300px;
+  display: flex;
+  max-width: 400px;
+  align-items: center;
+  justify-content: center;
+}
+.avatar-container.shrink {
+  height: auto;
+  align-items: end;
+  justify-content: end;
+}

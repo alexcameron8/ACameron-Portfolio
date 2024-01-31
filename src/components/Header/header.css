@@ -1,0 +1,17 @@
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.header-container h1 {
+  display: contents;
+  color: brown;
+  font-size: 4em;
+}
+.header-container p {
+  padding-right: 3em;
+}

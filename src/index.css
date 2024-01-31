@@ -1,133 +1,23 @@
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Consolas, monaco, monospace;
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  /* Light Mode */
+  /* background-color: rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.87); */
+  /* Dark Mode */
+  /* background-color: rgb(17, 17, 17);
+  color: rgb(255, 255, 255); */
 }
 
 button {
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-family: Consolas, monaco, monospace;
 }
 .app {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-/* Everything Below is for ChatBox CSS */
-.chat-container {
-  border: 1px solid black;
-  width: 50%;
-  background-color: grey;
-}
-.message-container {
-  display: flex;
   flex-direction: column;
 }
-.system {
-  align-self: flex-start;
-  background-color: rgb(69, 115, 255);
-  color: white;
-}
-.user {
-  align-self: flex-end;
-  background-color: white;
-  color: black;
-}
-.message {
-  position: relative; /* Set position to relative */
-  border-radius: 2rem;
-  padding-left: 2%;
-  padding: 8px;
-  margin: 4px;
-  max-width: 40%;
-  width: fit-content;
-}
-
-.message p {
-  margin-inline-start: 0.5rem;
-  margin-inline-end: 0.5rem;
-  margin-block-end: 0;
-  margin-block-start: 0;
-  overflow: hidden;
-}
-
-.answers-container {
-  gap: 1%;
-  margin-top: 5%;
-  flex-flow: wrap;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-.btn-answer {
-  border-radius: 1rem;
-  color: white;
-  background-color: #000000;
-  padding-inline-start: 0.5rem;
-  padding-inline-end: 0.5rem;
-}
-.btn-answer:hover {
-  cursor: pointer;
-  transform: scale(1.02);
-  filter: brightness(1.2);
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
-}
-.btn-reset {
-  border-radius: 1rem;
-  color: white;
-  background-color: #705d80;
-}
-.btn-reset:hover {
-  cursor: pointer;
-  transform: scale(1.02);
-  filter: brightness(1.2);
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
-}
-
-/* CSS for message typing animation: https://dev.to/3mustard/create-a-typing-animation-in-react-17o0 */
-.typing {
-  width: auto;
-  height: auto;
-  position: relative;
-  padding: 0.625rem; /* 10px */
-  border-radius: 1.25rem; /* 20px */
-}
-
-.typing__dot {
-  float: left;
-  width: 0.5rem; /* 8px */
-  height: 0.5rem; /* 8px */
-  margin: 0 0.25rem; /* 4px */
-  /* background: #8d8c91; */
-  background: white;
-  border-radius: 50%;
-  opacity: 0;
-  animation: loadingFade 1s infinite;
-}
-
-.typing__dot:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.typing__dot:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.typing__dot:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-@keyframes loadingFade {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-/* Animations */
-
-/* Everything Above is for ChatBox CSS */

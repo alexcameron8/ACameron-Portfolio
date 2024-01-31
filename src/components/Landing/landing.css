@@ -1,0 +1,26 @@
+.landing-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 850px;
+}
+.profile-container {
+  width: 50%;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+  .landing-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .profile-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+  }
+}

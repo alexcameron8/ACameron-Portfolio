@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 /* eslint-disable react/prop-types */
-export function Message({ type, children }) {
+export function Message({ type, children, className }) {
   const [isTyping, setIsTyping] = useState(true);
   const [textToShow, setTextToShow] = useState("");
 
@@ -39,7 +39,7 @@ export function Message({ type, children }) {
   );
 
   return (
-    <div className={`message ${type}`}>
+    <div className={`message ${type} ${className || ""}`}>
       {isTyping && type === "system" ? (
         <Typing type={type} />
       ) : (

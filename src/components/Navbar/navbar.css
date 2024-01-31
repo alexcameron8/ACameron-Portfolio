@@ -1,0 +1,19 @@
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align items with space between */
+  width: 95%;
+}
+
+.btn-light-dark {
+  border: none;
+  background: none;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  margin-top: 1%;
+}
+.btn-light-dark:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}

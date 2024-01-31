@@ -18,4 +18,9 @@ Configuration guide: https://docs.readyplayer.me/ready-player-me/integration-gui
 
 3. Install react.js
    Three.js is a lightweight 3D library tool that allows advanced rendering in the web.
+
    `npm install three`
+
+4. Install React-icons library
+
+'npm install react-icons'
