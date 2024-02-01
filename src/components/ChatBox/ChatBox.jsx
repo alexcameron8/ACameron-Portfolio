@@ -133,10 +133,6 @@ export function ChatBox() {
         <div className="message-container">
           {messages.map((message, index) => {
             // Render only if the message is complete or if it's the first message
-            console.log("Data below for:" + message.text);
-            console.log(message.isComplete);
-            console.log("Cur index:" + index);
-            console.log("Last completed index: (+1)" + lastCompleteIndex);
             if (
               message.isComplete ||
               index === 0 ||

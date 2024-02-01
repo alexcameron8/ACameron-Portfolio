@@ -15,8 +15,6 @@ export function Message({ id, type, children, setIsComplete, reset }) {
           setTextToShow(text.substring(0, currentIndex));
           currentIndex++;
         } else {
-          console.log("DONE HERE! Typing done for: " + type);
-          // IS THIS WHERE ISCOMPLETED GETS CALLED?
           setIsComplete(id, true);
           clearInterval(interval);
         }

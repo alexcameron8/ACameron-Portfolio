@@ -22,7 +22,7 @@ export function Navbar() {
   }
   return (
     <div className="navbar-container">
-      <div className="navbar">Navbar Placeholder</div>
+      <div className="navbar">AC</div>
       <button className="btn-light-dark" onClick={handleToggleLightDarkMode}>
         {isLight ? <FiSun /> : <FiMoon color="white" />}
       </button>
