@@ -28,3 +28,7 @@ Configuration guide: https://docs.readyplayer.me/ready-player-me/integration-gui
 5. Install react-tool-tip
 
 `npm install react-tooltip`
+
+6. Resize detector library
+
+`npm install react-resize-detector`

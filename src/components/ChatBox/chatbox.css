@@ -74,6 +74,7 @@
   padding-bottom: 0.2rem;
   /* margin-top: 1%; */
   margin-bottom: 1.5%;
+  border: 1px solid var(--text-color);
 }
 .btn-answer:hover {
   cursor: pointer;

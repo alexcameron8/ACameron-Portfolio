@@ -8,7 +8,8 @@
     "tags": ["Javascript", "React.js", "HTML", "CSS"],
     "description": "Check out my Formula 1 passion project, a race countdown application infused with team and driver data sourced from the Ergast API. Developed using React.js, this project showcases my commitment to continuously learning new technologies and my dedication to delivering visually appealing user experiences. Explore this project to witness firsthand my enthusiasm for Formula 1 and the dynamic world of front end web development. (www.lex1racing.com)",
     "repositoryLink": "https://github.com/alexcameron8/race-countdown-timer",
-    "image": "/assets/race-timer-countdown.PNG"
+    "image": "/assets/race-timer-countdown.PNG",
+    "deployment": "www.lex1racing.com"
   },
   {
     "title": "IoT Urban Smart Gardening System",
@@ -59,7 +60,8 @@
     "tags": ["HTML", "CSS", "Javascript"],
     "description": "I developed this personal website using HTML, CSS, and JavaScript. I used HTML to structure the content of the website, CSS to style the page and add visual elements, and JavaScript to add interactivity and dynamic features to the site.",
     "repositoryLink": "https://github.com/alexcameron8/ACameron",
-    "image": "/assets/web-dev.png"
+    "image": "/assets/web-dev.png",
+    "deployment": "www.acameron.tech"
   },
   {
     "title": "Risk Board Game",
