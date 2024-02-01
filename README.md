@@ -24,3 +24,11 @@ Configuration guide: https://docs.readyplayer.me/ready-player-me/integration-gui
 4. Install React-icons library
 
 'npm install react-icons'
+
+5. Install react-tool-tip
+
+`npm install react-tooltip`
+
+6. Resize detector library
+
+`npm install react-resize-detector`

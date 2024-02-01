@@ -1,7 +1,7 @@
-import { ChatBox } from "./components/ChatBox/ChatBox";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Landing } from "./components/Landing/Landing";
 import { Projects } from "./components/Projects/Projects";
+import { Footer } from "./components/Footer/Footer";
 /* eslint-disable react/prop-types */
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
       <Navbar />
       <Landing />
       <Projects />
+      <Footer />
     </div>
   );
 }

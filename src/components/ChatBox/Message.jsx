@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 
 /* eslint-disable react/prop-types */
-export function Message({ type, children, className }) {
+export function Message({ id, type, children, setIsComplete, reset }) {
+  const charInterval = 40;
   const [isTyping, setIsTyping] = useState(true);
   const [textToShow, setTextToShow] = useState("");
 
@@ -14,11 +15,10 @@ export function Message({ type, children, className }) {
           setTextToShow(text.substring(0, currentIndex));
           currentIndex++;
         } else {
-          console.log("DONE HERE!");
-          // setIsTyping(false);
+          setIsComplete(id, true);
           clearInterval(interval);
         }
-      }, 40); // Adjust the interval for the typing speed
+      }, charInterval); // Adjust the interval for the typing speed
     }
     const timer = setTimeout(
       () => {
@@ -28,7 +28,7 @@ export function Message({ type, children, className }) {
     );
 
     return () => clearTimeout(timer); // Clear the timer on component unmount
-  }, [isTyping, setIsTyping, type, children]);
+  }, [isTyping, setIsTyping, type, children, reset]);
 
   const Typing = ({ type }) => (
     <div className={`typing ${type}`}>
@@ -39,7 +39,7 @@ export function Message({ type, children, className }) {
   );
 
   return (
-    <div className={`message ${type} ${className || ""}`}>
+    <div className={`message ${type}`}>
       {isTyping && type === "system" ? (
         <Typing type={type} />
       ) : (

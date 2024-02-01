@@ -1,6 +1,8 @@
-/* Everything Below is for ChatBox CSS */
+@import "./src/variables.css";
+
 .chat-container {
   /* border: 1px solid black; */
+  min-width: 350px;
   max-width: 400px;
   /* overflow: hidden; */
   position: relative;
@@ -38,6 +40,7 @@
   margin-block-end: 0;
   margin-block-start: 0;
   overflow: hidden;
+  font-size: 1rem;
 }
 
 .answers-container {
@@ -47,6 +50,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  animation: slideInRightToLeft 0.35s ease-in-out;
 }
 .reset-container {
   gap: 1%;
@@ -55,18 +59,22 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .btn-answer {
   border-radius: 1rem;
-  color: white;
-  background-color: #000000;
+  /* color: white;
+  background-color: #000000; */
+  color: var(--text-color);
+  background-color: var(--bg-color);
   padding-inline-start: 0.5rem;
   padding-inline-end: 0.5rem;
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;
   /* margin-top: 1%; */
   margin-bottom: 1.5%;
+  border: 1px solid var(--text-color);
 }
 .btn-answer:hover {
   cursor: pointer;
@@ -148,5 +156,21 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes slideInRightToLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
