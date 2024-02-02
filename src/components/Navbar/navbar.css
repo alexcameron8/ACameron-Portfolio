@@ -4,9 +4,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between; /* Align items with space between */
-  width: 95%;
+  width: 100%;
   position: fixed;
   background-color: var(--bg-color);
+  height: 50px;
 }
 
 .btn-light-dark {
@@ -14,7 +15,7 @@
   background: none;
   border-radius: 0.5rem;
   font-size: 1.5rem;
-  margin-top: 1%;
+  margin: 1%;
 }
 .btn-light-dark:hover {
   cursor: pointer;
@@ -22,6 +23,24 @@
   background: rgba(255, 255, 255, 0.2);
 }
 .navbar {
+  padding-left: 2%;
   display: flex;
   gap: 1rem;
+  font-size: 1.25rem;
+}
+
+.active {
+  text-decoration: solid underline rgb(168, 43, 43);
+  text-decoration-thickness: 0.2rem;
+}
+
+@keyframes underline-animation {
+  from {
+    width: 0;
+    left: 50%;
+  }
+  to {
+    width: 100%;
+    left: 0;
+  }
 }

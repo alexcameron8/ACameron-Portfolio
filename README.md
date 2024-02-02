@@ -32,3 +32,7 @@ Configuration guide: https://docs.readyplayer.me/ready-player-me/integration-gui
 6. Resize detector library
 
 `npm install react-resize-detector`
+
+7. react-scroll library
+
+`npm install react-scroll`

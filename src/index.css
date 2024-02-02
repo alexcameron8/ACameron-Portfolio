@@ -40,3 +40,10 @@ a {
   /* justify-content: center; */
   flex-direction: column;
 }
+
+@media (min-width: 1300px) {
+  .app {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+}
