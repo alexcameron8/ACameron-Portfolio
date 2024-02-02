@@ -47,7 +47,7 @@ export function Projects() {
   };
   console.log(slicedProjects);
   return (
-    <div className="projects-container">
+    <div className="projects-container" id="projects">
       <h1>Projects</h1>
       <div className="project-container">
         {slicedProjects?.map((project, index) => (

@@ -22,7 +22,20 @@ export function Navbar() {
   }
   return (
     <div className="navbar-container">
-      <div className="navbar">AC</div>
+      <nav className="navbar">
+        <a className="tab" href="#root">
+          Home
+        </a>
+        <a className="tab" href="#about-me" id="ba">
+          About
+        </a>
+        <a className="tab" href="#projects" id="bp">
+          Projects
+        </a>
+        <a className="tab" href="documents/Alex_Cameron_Resume.pdf">
+          Resume
+        </a>
+      </nav>
       <button className="btn-light-dark" onClick={handleToggleLightDarkMode}>
         {isLight ? <FiSun /> : <FiMoon color="white" />}
       </button>

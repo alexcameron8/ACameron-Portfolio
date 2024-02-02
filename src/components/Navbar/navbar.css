@@ -1,8 +1,12 @@
+@import "./src/variables.css";
+
 .navbar-container {
   display: flex;
   align-items: center;
   justify-content: space-between; /* Align items with space between */
   width: 95%;
+  position: fixed;
+  background-color: var(--bg-color);
 }
 
 .btn-light-dark {
@@ -16,4 +20,8 @@
   cursor: pointer;
   transform: scale(1.05);
   background: rgba(255, 255, 255, 0.2);
+}
+.navbar {
+  display: flex;
+  gap: 1rem;
 }
