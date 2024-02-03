@@ -67,6 +67,26 @@
 }
 .project-desc-text{
   color: var(--text-med-color);
+  margin-block-end: 0.2rem;
+}
+.resize-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-resize {
+  font-size: 0.8rem;
+  display: flex;
+  /* color: var(--text-low-color); */
+  color: var(--text-color);
+  border: none;
+  background: none;
+  text-decoration: 1px underline;
+}
+.btn-resize:hover{
+  cursor: pointer;
+  /* color: var(--text--color); */
+  color: var(--text-low-color);
 }
 .project-description-container {
   padding: 4%;
