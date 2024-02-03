@@ -27,7 +27,7 @@ export function Project({ project }) {
           >
             {project.year}
           </div>
-          <p>{project.description}</p>
+          <p className="project-desc-text">{project.description}</p>
         </div>
         <div className="skills-container">
           <ul className="skills-list">

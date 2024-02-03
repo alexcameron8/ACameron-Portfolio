@@ -12,9 +12,21 @@ export function Navbar() {
     if (isLight) {
       root.style.setProperty("--text-color", "rgba(0, 0, 0, 0.87)");
       root.style.setProperty("--bg-color", "rgb(255, 255, 255)");
+      root.style.setProperty("--text-med-color", "rgba(0, 0, 0, 0.5)");
+      root.style.setProperty("--text-low-color", "rgba(0, 0, 0, 0.38)");
+      root.style.setProperty("--bg-med-color", "rgb(255, 255, 255,0.8)");
+      root.style.setProperty("--bg-tag-color", "rgba(0, 0, 0, 0.2)");
+      root.style.setProperty("--bg-disabled-color", "rgba(0, 0, 0, 0.1)");
+      
     } else {
       root.style.setProperty("--bg-color", "rgb(17, 17, 17)");
       root.style.setProperty("--text-color", "rgb(255, 255, 255)");
+      root.style.setProperty("--text-med-color", "rgb(255, 255, 255,0.7)");
+      root.style.setProperty("--text-low-color", "rgb(255, 255, 255,0.38)");
+      root.style.setProperty("--bg-med-color", "rgb(17, 17, 17,0.6)");
+      root.style.setProperty("--bg-tag-color", "rgba(255, 255, 255, 0.2)");
+      root.style.setProperty("--bg-disabled-color", "rgba(255, 255, 255, 0.3);");
+      
     }
   }, [isLight]);
 
@@ -35,13 +47,6 @@ export function Navbar() {
       Events.scrollEvent.remove("scroll", "active");
     };
   }, []);
-  function scrollToElement(elementId) {
-    scroller.scrollTo(elementId, {
-      duration: 800,
-      delay: 0,
-      smooth: "easeInOutQuart",
-    });
-  }
 
   function handleToggleLightDarkMode() {
     setIsLight(!isLight);
@@ -49,18 +54,10 @@ export function Navbar() {
   return (
     <div className="navbar-container">
       <nav className="navbar">
-        {/* <a className="tab" href="#root">
-          Home
+        <a className="tab" href="home">
+          <img className="nav-img" src="./assets/AC_Logo-red-rm-bg.png" alt="nav-ac-logo"/>
         </a>
-        <a className="tab" href="#about-me" id="ba">
-          About
-        </a>
-        <a className="tab" href="#projects" id="bp">
-          Projects
-        </a>
-        <a className="tab" href="documents/Alex_Cameron_Resume.pdf">
-          Resume
-        </a> */}
+
         <Link
           className="tab"
           activeClass="active"
