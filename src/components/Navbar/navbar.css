@@ -29,6 +29,11 @@
   font-size: 1.25rem;
 }
 
+.tab:hover{
+  cursor: pointer;
+  /* transform: scale(1.05); */
+}
+
 .active {
   text-decoration: solid underline rgb(168, 43, 43);
   text-decoration-thickness: 0.2rem;
