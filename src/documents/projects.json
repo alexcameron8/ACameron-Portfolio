@@ -17,7 +17,7 @@
     "authors": ["Alex Cameron", "Ben Munro", "Thomas Dunnigan"],
     "date": "Jul 2022 - Apr 2023",
     "year": "2023",
-    "tags": ["Flutter", "Dart", "Appwrite"],
+    "tags": ["Flutter", "Dart", "Python", "Appwrite"],
     "description": "Developed a mobile app to communicate with an IoT enabled smart gardening and farming solution. The sensor node uses an ESP32 MCU to communicate with the sensor devices. Built the backend using Appwrite which communicates to the sensor node by an MQTT broker. The mobile app was developed in Dart using the Flutter framework.",
     "video": "https://github.com/alexcameron8/ACameron/raw/master/Assets/IoT-SmartGarden-PosterFair-Video.mp4",
     "videoFooter": "Capstone Project Video - Internet of Things Smart Garden Engineering Product",
@@ -91,7 +91,7 @@
     "authors": ["Alex Cameron", "Martin Dimitrov", "Mesha Edwardson"],
     "date": "October 9-11, 2020",
     "year": "2020",
-    "tags": ["Typescript, React Native"],
+    "tags": ["Typescript", "React Native"],
     "description": "Hercules is a mobile app created with react native. The app contains a database of hundreds of workouts. We leverage this database to let the user create and track several different workouts of their choice. This project was done in a group of 3, however, this was my first hackathon and first time using any front-end language which made this project a great learning opportunity and allowed myself to learn how to work better with a team. Designed the models for routines and exercises while learning and understanding typescript syntax in a short period of time.",
     "repositoryLink": "https://github.com/alexcameron8/hercules",
     "image": "/assets/herc-proj.PNG"

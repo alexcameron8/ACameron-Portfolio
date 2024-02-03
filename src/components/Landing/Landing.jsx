@@ -4,7 +4,7 @@ import "./landing.css";
 
 export function Landing() {
   return (
-    <div className="landing-container">
+    <div id="home" className="landing-container">
       <Header />
       <ChatBox />
     </div>

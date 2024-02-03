@@ -11,7 +11,7 @@
 }
 .header-container h1 {
   display: contents;
-  color: brown;
+  color: rgb(168, 43, 43);
   font-size: 4em;
 }
 .header-container p {
