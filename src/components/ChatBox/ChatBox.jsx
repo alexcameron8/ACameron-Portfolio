@@ -3,7 +3,7 @@ import { Answer } from "./Answer";
 import { Message } from "./Message";
 import { AvatarProfile } from "./AvatarProfile";
 import { GrPowerReset } from "react-icons/gr";
-import HangmanGame from "../Games/hangman";
+import HangmanGame from "../Games/hangman/hangman";
 
 const conversations_data = [
   {
@@ -91,7 +91,6 @@ export function ChatBox() {
       } else if (activeGame === "Hangman") {
         if (hangmanGame.isGameOver) {
           if (message.answer == "Play Again") {
-            console.log("HEre or????");
             setHangman();
             hangmanGame.isGameOver = false;
             return;
@@ -99,7 +98,6 @@ export function ChatBox() {
         }
         // Letter is clicked
         const clicked_letter = message.message;
-        console.log(clicked_letter);
 
         const user_letter_guess = {
           id: "id" + Math.random().toString(16).slice(2),
@@ -216,7 +214,6 @@ export function ChatBox() {
         const game_messages = message.games
           .slice()
           .map((game) => ({ message: game.name, answer: "" }));
-        console.log(game_messages);
 
         setConversations(game_messages);
       }
@@ -281,7 +278,6 @@ export function ChatBox() {
         message: letter,
         answer: `guessLetter(${letter})`,
       }));
-    console.log(hangman_replies);
     setConversations(hangman_replies);
   }
 
