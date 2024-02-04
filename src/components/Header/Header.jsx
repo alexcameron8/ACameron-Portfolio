@@ -7,7 +7,7 @@ import "./header.css";
 export function Header() {
   return (
     <div className="header-container">
-      <h2>Greetings!</h2>
+      <h2>Greetings!<span className="wave">👋🏻</span></h2>
       <h1>Alex Cameron</h1>
       <h3>Software Developer</h3>
       <p>

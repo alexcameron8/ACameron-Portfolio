@@ -1,3 +1,4 @@
+import {useState} from "react"
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import { FaGithub } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
@@ -6,8 +7,13 @@ import "./projects.css";
 
 /* eslint-disable react/prop-types */
 export function Project({ project }) {
+  const [expanded, setExpanded] = useState(false);
   let isDeployed = false;
 
+  const toggleExpanded = () => {
+    setExpanded(!expanded);
+  };
+  const limit = 150;  // Limit for number of chars to display when not expanded
   if (project.deployment) isDeployed = true;
   return (
     <>
@@ -27,7 +33,15 @@ export function Project({ project }) {
           >
             {project.year}
           </div>
-          <p>{project.description}</p>
+          {/* <p className="project-desc-text">{project.description}</p> */}
+          <p className="project-desc-text">        {expanded ? project.description : `${project.description.slice(0, limit)}${project.description.length > limit ? '...' : ''}`}</p>
+          <div className="resize-container">
+          {project.description.length > limit && (
+            <button className="btn-resize" onClick={toggleExpanded}>
+          {expanded ? 'Read Less' : 'Read More...'}
+        </button>
+      )}
+      </div>
         </div>
         <div className="skills-container">
           <ul className="skills-list">

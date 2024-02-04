@@ -27,6 +27,8 @@
   display: flex;
   gap: 1rem;
   font-size: 1.25rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .tab:hover{
@@ -38,7 +40,11 @@
   text-decoration: solid underline rgb(168, 43, 43);
   text-decoration-thickness: 0.2rem;
 }
-
+.nav-img{
+  max-width: 45px;
+  height: 45px;
+  display: flex;
+}
 @keyframes underline-animation {
   from {
     width: 0;
