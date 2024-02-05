@@ -36,3 +36,6 @@ Configuration guide: https://docs.readyplayer.me/ready-player-me/integration-gui
 7. react-scroll library
 
 `npm install react-scroll`
+
+Avatar created with:
+https://www.cartoonize.net/avatar-maker/

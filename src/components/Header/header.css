@@ -12,11 +12,18 @@
 .header-container h1 {
   display: contents;
   color: rgb(168, 43, 43);
-  font-size: 4em;
+  font-size: 6em;
+}
+.header-container h2 {
+  font-size: 2.4em;
+}
+.header-container h3 {
+  font-size: 2em;
 }
 .header-container p {
   padding-right: 3em;
   color: var(--text-med-color);
+  font-size: 1.2rem;
 }
 .socials-container {
   display: flex;
@@ -41,19 +48,35 @@
   color: inherit; /* Inherit the color from the parent button */
 }
 
-.wave{
-  font-size: 2rem;
+.wave {
+  font-size: 2.4rem;
   display: inline-block;
   animation: wave-animation 2.5s infinite;
   /* animation-duration: 2.5s;  */
 }
 @keyframes wave-animation {
-  0% { transform: rotate( 0.0deg) }
- 10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
- 20% { transform: rotate(-8.0deg) }
- 30% { transform: rotate(14.0deg) }
- 40% { transform: rotate(-4.0deg) }
- 50% { transform: rotate(10.0deg) }
- 60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
-100% { transform: rotate( 0.0deg) }
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
 }

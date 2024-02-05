@@ -1,10 +1,12 @@
-/* variables.css (Light mode properties) */ 
+/* variables.css (Light mode properties) */
 :root {
   --text-color: rgba(0, 0, 0, 0.87);
   --text-med-color: rgba(0, 0, 0, 0.6);
   --text-low-color: rgba(0, 0, 0, 0.38);
   --bg-color: rgb(255, 255, 255);
-  --bg-med-color: rgb(255, 255, 255,0.8);
+  --bg-med-color: rgb(255, 255, 255, 0.8);
   --bg-tag-color: rgba(255, 255, 255, 0.2);
   --bg-disabled-color: rgba(0, 0, 0, 0.1);
+
+  --potential-dark-bg-colour: #140e1a;
 }

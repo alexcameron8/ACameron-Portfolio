@@ -7,11 +7,13 @@ import "./header.css";
 export function Header() {
   return (
     <div className="header-container">
-      <h2>Greetings!<span className="wave">👋🏻</span></h2>
+      <h2>
+        Greetings!<span className="wave">👋🏻</span>
+      </h2>
       <h1>Alex Cameron</h1>
       <h3>Software Developer</h3>
       <p>
-        Welcome to my portfolio! I am a software engineering graduate student
+        Welcome to my portfolio! I am a software engineering recent graduate
         fascinated by technology and ready to create impactful software.
       </p>
       <div className="socials-container">

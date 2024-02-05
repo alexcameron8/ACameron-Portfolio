@@ -1,6 +1,6 @@
 [
   {
-    "title": "Formula 1 Race Countdown Timer",
+    "title": "Formula 1 Race Countdown",
     "subtitle": "React Web Application",
     "authors": ["Alex Cameron"],
     "date": "Jan 2024",
@@ -12,7 +12,7 @@
     "deployment": "www.lex1racing.com"
   },
   {
-    "title": "IoT Urban Smart Gardening System",
+    "title": "IoT Smart Gardening System",
     "subtitle": "Engineering Capstone Project",
     "authors": ["Alex Cameron", "Ben Munro", "Thomas Dunnigan"],
     "date": "Jul 2022 - Apr 2023",
