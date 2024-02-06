@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   max-width: 1750px;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  /* padding-left: 2rem; */
+  /* padding-right: 2rem; */
   align-items: center;
   width: 100%;
   margin-bottom: 6rem;
@@ -13,10 +13,10 @@
   display: flex;
   list-style-type: none;
   padding-inline-start: 0;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   align-self: center;
-  width: 90%;
+  width: 75%;
 }
 .toolkit-img {
   width: 50px;
@@ -31,6 +31,25 @@
   padding-bottom: 0.2rem;
   align-items: center;
 }
-.test {
-  display: flex;
+
+.skill-icon {
+  /* background-color: white; */
+  width: 15px;
+  height: 15px;
+}
+@media (max-width: 900px) {
+  .toolkit-list {
+    width: 90%;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(4, 1fr); /* Three columns with equal width */
+  }
+}
+@media (max-width: 500px) {
+  .toolkit-container {
+    width: auto;
+  }
+  .toolkit-list {
+    width: 100%;
+  }
 }

@@ -7,7 +7,7 @@ import HangmanGame from "../Games/hangman/hangman";
 
 const conversations_data = [
   {
-    message: "Tell me about yourself.👨",
+    message: "Tell me about yourself.💬",
     answer:
       "My name is Alex. I am a graduate from Carleton University with a Bachelors degree in Software Engineering.",
   },

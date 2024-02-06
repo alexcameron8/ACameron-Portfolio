@@ -20,8 +20,8 @@
   ); /* Adjust to show only the first two rows */
 }
 .btn-expand-container {
-  margin-top: 1%;
-  margin-bottom: 1%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,10 +32,11 @@
   border: none;
   border-radius: 0.5rem;
   font-size: 1rem;
-  padding-top: 0.75%;
-  padding-bottom: 0.75%;
-  padding-left: 1.25%;
-  padding-right: 1.25%;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  font-weight: bold;
   /* justify-items: center; */
   background-color: var(--text-color);
   color: var(--bg-color);
@@ -47,6 +48,7 @@
 }
 /* Project.jsx */
 .project-item {
+  height: auto;
   display: flex;
   flex-direction: column;
   background-color: var(--bg-color);
@@ -60,10 +62,24 @@
   height: 40%;
   overflow: hidden;
 }
+.project-image-container:hover {
+  cursor: pointer;
+}
+.project-demo-container {
+  /* position: relative; */
+  height: 100%;
+}
 .project-image {
-  width: 100%; /* Make the image fill the width of its container */
-  height: 100%; /* Make the image fill the height of its container */
-  object-fit: cover; /* Maintain the aspect ratio of the image while covering the container */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+.project-demo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
 }
@@ -96,6 +112,7 @@
 }
 .button-container {
   margin-top: auto;
+  margin-bottom: 0.5rem;
   padding: 2%;
   display: flex;
   justify-content: center;
@@ -181,6 +198,32 @@
 @media (max-width: 600px) {
   .project-container {
     grid-template-columns: auto;
+  }
+}
+@media (max-width: 500px) {
+  .project-container {
+    grid-template-columns: auto;
+  }
+  .btn-deployment {
+    font-size: 0.8rem;
+  }
+  .a-deployment {
+    font-size: 0.8rem;
+  }
+  .project-desc-text {
+    font-size: 0.85rem;
+  }
+  .project-item h2 {
+    font-size: 1.15em;
+  }
+  .skill-item {
+    font-size: 0.8rem;
+  }
+  .proj-year {
+    font-size: 0.9rem;
+  }
+  .btn-resize {
+    font-size: 0.7rem;
   }
 }
 .skills-container {

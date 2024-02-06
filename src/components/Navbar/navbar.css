@@ -10,7 +10,9 @@
   background-color: var(--bg-color);
   height: 50px;
 }
-
+#nav-resume-tool-tip {
+  z-index: 1;
+}
 .btn-light-dark {
   border: none;
   background: none;
@@ -54,5 +56,20 @@
   to {
     width: 100%;
     left: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-container {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+  .navbar {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 375px) {
+  .navbar {
+    gap: 0.5rem;
   }
 }

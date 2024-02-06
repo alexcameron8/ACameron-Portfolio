@@ -5,7 +5,7 @@
   /* min-width: 350px; */
   width: 400px;
   max-width: 400px;
-  /* overflow: hidden; */
+  overflow: hidden;
   position: relative;
 }
 .message-container {
@@ -47,6 +47,8 @@
 .answers-container {
   gap: 1%;
   margin-top: 5%;
+  padding-right: 5px;
+  padding-left: 2px;
   flex-flow: wrap;
   display: flex;
   align-items: center;
@@ -173,5 +175,25 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 400px) {
+  .chat-container {
+    width: 350px;
+  }
+  .btn-answer {
+    font-size: 0.85rem;
+  }
+  .btn-reset {
+    font-size: 0.9rem;
+  }
+  .message p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 370px) {
+  .chat-container {
+    width: 330px;
   }
 }

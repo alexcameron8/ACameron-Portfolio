@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { Skills } from "./Skills";
 import "./about.css";
 
 export function About({ isLight }) {
@@ -34,7 +35,7 @@ export function About({ isLight }) {
               </Tab>
             </TabList>
 
-            <TabPanel>
+            <TabPanel className="tab-desc">
               <p className="about-p">
                 Thanks for scrolling this far! I'm Alex Cameron, an energetic
                 and dedicated recent graduate with a degree in{" "}
@@ -55,7 +56,7 @@ export function About({ isLight }) {
                 journey.
               </p>
             </TabPanel>
-            <TabPanel>
+            <TabPanel className="tab-desc">
               <p className="about-p">
                 Growing up I have always embraced the ideology of immersing
                 myself around technology.
@@ -75,7 +76,7 @@ export function About({ isLight }) {
                 this community.
               </p>
             </TabPanel>
-            <TabPanel>
+            <TabPanel className="tab-desc">
               <p className="about-p">
                 My professional journey has been enriched by a substantial
                 16-month Co-op tenure with Gastops Ltd, where I actively
@@ -100,6 +101,7 @@ export function About({ isLight }) {
           />
         </div>
       </div>
+      <Skills />
     </div>
   );
 }

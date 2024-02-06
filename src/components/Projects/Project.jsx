@@ -1,4 +1,4 @@
-import {useState} from "react"
+import { useState } from "react";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import { FaGithub } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
@@ -8,22 +8,48 @@ import "./projects.css";
 /* eslint-disable react/prop-types */
 export function Project({ project }) {
   const [expanded, setExpanded] = useState(false);
+  const [hover, setHover] = useState(false);
+
   let isDeployed = false;
 
   const toggleExpanded = () => {
     setExpanded(!expanded);
   };
-  const limit = 150;  // Limit for number of chars to display when not expanded
+  const handleClick = (videoUrl) => {
+    window.open(videoUrl, "_blank");
+  };
+
+  const limit = 150; // Limit for number of chars to display when not expanded
   if (project.deployment) isDeployed = true;
   return (
     <>
       <div className="project-item">
-        <div className="project-image-container">
-          <img
-            className="project-image"
-            src={project.image}
-            alt={project.title}
-          />
+        <div
+          className="project-image-container"
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
+        >
+          <div className="project-demo-container">
+            {hover ? (
+              // <div className="project-vid">
+              <video
+                className="project-demo"
+                src={project.video}
+                type="video/mp4"
+                loop
+                autoPlay
+                controls
+                muted
+              />
+            ) : (
+              // </div>
+              <img
+                className="project-image"
+                src={project.image}
+                alt={project.title}
+              />
+            )}
+          </div>
         </div>
         <div className="project-description-container">
           <h2>{project.title}</h2>
@@ -34,14 +60,21 @@ export function Project({ project }) {
             {project.year}
           </div>
           {/* <p className="project-desc-text">{project.description}</p> */}
-          <p className="project-desc-text">        {expanded ? project.description : `${project.description.slice(0, limit)}${project.description.length > limit ? '...' : ''}`}</p>
+          <p className="project-desc-text">
+            {" "}
+            {expanded
+              ? project.description
+              : `${project.description.slice(0, limit)}${
+                  project.description.length > limit ? "..." : ""
+                }`}
+          </p>
           <div className="resize-container">
-          {project.description.length > limit && (
-            <button className="btn-resize" onClick={toggleExpanded}>
-          {expanded ? 'Read Less' : 'Read More...'}
-        </button>
-      )}
-      </div>
+            {project.description.length > limit && (
+              <button className="btn-resize" onClick={toggleExpanded}>
+                {expanded ? "Read Less" : "Read More..."}
+              </button>
+            )}
+          </div>
         </div>
         <div className="skills-container">
           <ul className="skills-list">

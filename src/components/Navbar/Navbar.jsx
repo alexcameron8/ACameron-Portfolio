@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { FiSun, FiMoon } from "react-icons/fi";
-import { Link, Events, scroller } from "react-scroll";
+import { Link, Events } from "react-scroll";
 import "./navbar.css";
+import { Tooltip as ReactTooltip } from "react-tooltip";
 
 export function Navbar({ isLight, handleToggleLightDarkMode }) {
-  // Note: Not best practice to directly manipulate DOM in react. Logic rework required.
   useEffect(() => {
     const root = document.documentElement;
     if (isLight) {
@@ -48,57 +48,68 @@ export function Navbar({ isLight, handleToggleLightDarkMode }) {
   }, []);
 
   return (
-    <div className="navbar-container">
-      <nav className="navbar">
-        <a className="tab" href="home">
-          <img
-            className="nav-img"
-            src="./assets/AC_Logo-red-rm-bg.png"
-            alt="nav-ac-logo"
-          />
-        </a>
+    <>
+      <div className="navbar-container">
+        <nav className="navbar">
+          <a className="tab" href="home">
+            <img
+              className="nav-img"
+              src="./assets/AC_Logo-red-rm-bg.png"
+              alt="nav-ac-logo"
+            />
+          </a>
 
-        <Link
-          className="tab"
-          activeClass="active"
-          to="home"
-          spy={true}
-          smooth={true}
-          duration={500}
+          <Link
+            className="tab"
+            activeClass="active"
+            to="home"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            Home
+          </Link>
+          <Link
+            className="tab"
+            activeClass="active"
+            to="projects"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            Projects
+          </Link>
+          <Link
+            className="tab"
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            About
+          </Link>
+          <a
+            className="tab"
+            href="documents/Alex_Cameron_Resume.pdf"
+            data-tooltip-id="nav-resume-tool-tip"
+          >
+            Resume
+          </a>
+        </nav>
+        <button
+          className="btn-light-dark"
+          onClick={handleToggleLightDarkMode}
+          aria-label="light-dark"
         >
-          Home
-        </Link>
-        <Link
-          className="tab"
-          activeClass="active"
-          to="projects"
-          spy={true}
-          smooth={true}
-          duration={500}
-        >
-          Projects
-        </Link>
-        <Link
-          className="tab"
-          activeClass="active"
-          to="about"
-          spy={true}
-          smooth={true}
-          duration={500}
-        >
-          About
-        </Link>
-        <a className="tab" href="documents/Alex_Cameron_Resume.pdf">
-          Resume
-        </a>
-      </nav>
-      <button
-        className="btn-light-dark"
-        onClick={handleToggleLightDarkMode}
-        aria-label="light-dark"
-      >
-        {isLight ? <FiSun /> : <FiMoon color="white" />}
-      </button>
-    </div>
+          {isLight ? <FiSun /> : <FiMoon color="white" />}
+        </button>
+      </div>
+      <ReactTooltip
+        id="nav-resume-tool-tip"
+        place="bottom"
+        content="Download PDF"
+      />
+    </>
   );
 }
