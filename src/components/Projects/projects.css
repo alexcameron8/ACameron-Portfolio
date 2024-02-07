@@ -58,6 +58,7 @@
 }
 .project-item h2 {
   text-decoration: underline;
+  -webkit-text-decoration: underline; /* WebKit-specific property for iOS */
 }
 .project-image-container {
   height: 40%;
@@ -101,6 +102,7 @@
   border: none;
   background: none;
   text-decoration: 1px underline;
+  -webkit-text-decoration: 1px underline; /* WebKit-specific property for iOS */
 }
 .btn-resize:hover {
   cursor: pointer;
