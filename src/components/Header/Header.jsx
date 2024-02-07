@@ -16,7 +16,8 @@ export function Header() {
         <h3>Software Developer</h3>
         <p>
           Welcome to my portfolio! I am a software engineering recent graduate
-          fascinated by technology and ready to create impactful software.
+          fascinated by technology and interested in contributing to quality
+          enterprise software.
         </p>
         <div className="socials-container">
           <button className="btn-social">

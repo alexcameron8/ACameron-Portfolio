@@ -9,6 +9,7 @@
   padding-right: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  padding-top: 4rem;
 }
 
 .project-container {
@@ -139,7 +140,7 @@
 }
 
 .btn-deployment-disabled {
-  /* border: 1px solid var(--text-low-color); */
+  border: 1px solid var(--text-low-color);
   background: none;
   border-radius: 0.5rem;
   font-size: 1.5rem;

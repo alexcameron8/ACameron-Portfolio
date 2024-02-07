@@ -25,3 +25,16 @@
   align-items: end;
   justify-content: end;
 }
+@media (max-width: 500px) {
+  .avatar-container {
+    height: auto;
+  }
+  .avatar-img {
+    width: 265px;
+    height: 250px;
+  }
+  .avatar-img.shrink {
+    width: 135px;
+    height: 120px;
+  }
+}
