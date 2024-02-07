@@ -10,7 +10,6 @@ export function About({ isLight }) {
   return (
     <div id="about" className="about-container">
       <h1>Want to learn more about me? Read below! </h1>
-      {/* <h1>{tabIndex === 0 ? "About me✍🏻" : "My Journey🚀"}</h1> */}
       <div className="about-bio">
         <div className="tabs">
           <Tabs

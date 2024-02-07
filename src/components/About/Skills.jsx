@@ -38,7 +38,7 @@ const skills = [
 export function Skills() {
   return (
     <div className="toolkit-container">
-      <h3>My Toolkit 💻</h3>
+      <h2>My Toolkit 💻</h2>
       <ul className="toolkit-list">
         {skills.map((skill, index) => (
           <Skill key={index} skill={skill} />

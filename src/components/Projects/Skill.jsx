@@ -125,9 +125,9 @@ export function Skill({ skill }) {
           </div> */}
           <div
             className="skill-item"
-            // style={{ border: `1px solid ${skill_data[0].color}` }}
+            style={{ border: `2px solid ${skill_data[0].color}` }}
             // style={{ border: `0.5px solid white` }}
-            style={{ backgroundColor: `${skill_data[0].color}` }}
+            // style={{ backgroundColor: `${skill_data[0].color}` }}
           >
             <img className="skill-icon" src={skill_data[0].src} alt={skill} />{" "}
             &nbsp;{skill}

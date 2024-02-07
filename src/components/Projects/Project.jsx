@@ -91,13 +91,13 @@ export function Project({ project }) {
             disabled={isDeployed ? false : true}
           >
             <a className="a-deployment" href={project.deployment}>
-              <CgWebsite /> &nbsp;
+              <CgWebsite style={{ color: "var(--text-color)" }} /> &nbsp;
               {isDeployed ? "Live Deployment" : "Not Deployed"}
             </a>
           </button>
           <button className="btn-gh">
             <a className="a-deployment" href={project.repositoryLink}>
-              <FaGithub color="black" />
+              <FaGithub style={{ color: "var(--text-color)" }} />
               &nbsp;Source Code
             </a>
           </button>
