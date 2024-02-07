@@ -1,0 +1,81 @@
+[
+  {
+    "title": "Formula 1 Race Countdown",
+    "subtitle": "React Web Application",
+    "authors": ["Alex Cameron"],
+    "date": "Jan 2024",
+    "year": "2024",
+    "tags": ["Javascript", "React.js", "HTML", "CSS"],
+    "description": "Check out my Formula 1 passion project, a race countdown application infused with team and driver data sourced from the Ergast API. Developed using React.js, this project showcases my commitment to continuously learning new technologies and my dedication to delivering visually appealing user experiences. Explore this project to witness firsthand my enthusiasm for Formula 1 and the dynamic world of front end web development. (www.lex1racing.com)",
+    "repositoryLink": "https://github.com/alexcameron8/race-countdown-timer",
+    "video": "https://github.com/alexcameron8/ACameron-Portfolio/raw/main/public/assets/Demos/Race_Countdown_Demo.mp4",
+    "image": "/assets/race-timer-countdown.PNG",
+    "deployment": "www.lex1racing.com"
+  },
+  {
+    "title": "IoT Smart Gardening System",
+    "subtitle": "Engineering Capstone Project",
+    "authors": ["Alex Cameron", "Ben Munro", "Thomas Dunnigan"],
+    "date": "Jul 2022 - Apr 2023",
+    "year": "2023",
+    "tags": ["Flutter", "Dart", "Python", "Appwrite"],
+    "description": "Developed a mobile app to communicate with an IoT enabled smart gardening and farming solution. The sensor node uses an ESP32 MCU to communicate with the sensor devices. Built the backend using Appwrite which communicates to the sensor node by an MQTT broker. The mobile app was developed in Dart using the Flutter framework.",
+    "video": "https://github.com/alexcameron8/ACameron-Portfolio/raw/main/public/assets/Demos/IoT-SmartGarden-System-Demo.mp4",
+    "videoFooter": "Capstone Project Video - Internet of Things Smart Garden Engineering Product",
+    "repositoryLink": "https://gitlab.com/smartgardeningproject",
+    "image": "/assets/Iot-smart-garden-cover.jpg"
+  },
+  {
+    "title": "Amazin Online Bookstore",
+    "subtitle": "SYSC4806 - Java Spring Web Application",
+    "authors": ["Ben Munro", "Thomas Dunnigan", "Josh King"],
+    "date": "Jan 2023 - Apr 2023",
+    "year": "2023",
+    "tags": ["Java", "Spring", "RESTful API", "Maven"],
+    "description": "A Java web application that provides an online simulated platform for selling and purchasing books. This application has several features involving user accounts, selecting and purchasing books, as well as features to create new books and book stores. This app is developed using the Spring framework and leverages RESTful API's to make requests and serve information. The front end is designed using HTML, Javascript and the JQuery framework.",
+    "video": "https://github.com/alexcameron8/ACameron-Portfolio/raw/main/public/assets/Demos/Amazin_Project_demo.mp4",
+    "repositoryLink": "https://github.com/computebender/SYSC4806_Project5",
+    "image": "/assets/Amazin_Bookstore.PNG"
+  },
+  {
+    "title": "Elevator Simulator Project",
+    "subtitle": "SYSC3303 - Java Desktop Application",
+    "authors": [
+      "Martin Dimitrov",
+      "Ammar Tosun",
+      "Erdem Yanikomeroglu",
+      "David Casciano"
+    ],
+    "date": "Jan 2021 - Apr 2021",
+    "year": "2021",
+    "tags": ["Java"],
+    "description": "This project is a java desktop application which simulates an elevator using various software engineering concepts, such as, concurrency, scheduling, real-time systems, thread synchronization, MCV and internet protocols (TCP/IP). This project was done with 4 other group members and my contributions consisted of creating a GUI for the project using the Java swing framework while using model, control, view engineering design strategy.",
+    "video": "https://github.com/alexcameron8/ACameron-Portfolio/raw/main/public/assets/Demos/Elevator_System.mp4",
+    "repositoryLink": "https://github.com/martindmtrv/elevator-project",
+    "image": "/assets/Elevator-Project-Cover-Img.jpg"
+  },
+  {
+    "title": "Risk Board Game",
+    "subtitle": "SYSC3110 - Java Desktop Application",
+    "authors": ["Alex Cameron", "Ben Munro", "Thomas Dunnigan"],
+    "date": "Fall/Winter 2020-21",
+    "year": "2021",
+    "tags": ["Java"],
+    "description": "Built and designed a GUI application in java, based on the board game Risk, which implements many software development patterns, such as MCV, Test-driven development and more. Worked in a team of 3 members and used git as the version control system which ensured easy issue tracking and debugging. Designed UML and sequence diagrams while designing and enhancing the project which ensured all team members had clear goals and ideas while developing the project.",
+    "video": "https://github.com/alexcameron8/ACameron-Portfolio/raw/main/public/assets/Demos/Risk_Demo.mp4",
+    "repositoryLink": "https://github.com/alexcameron8/RiskGame",
+    "image": "/assets/Risk.PNG"
+  },
+  {
+    "title": "Hercules Gym Workout",
+    "subtitle": "Sunhack Hackathon",
+    "authors": ["Alex Cameron", "Martin Dimitrov", "Mesha Edwardson"],
+    "date": "October 9-11, 2020",
+    "year": "2020",
+    "tags": ["Typescript", "React Native"],
+    "description": "Hercules is a mobile app created with react native. The app contains a database of hundreds of workouts. We leverage this database to let the user create and track several different workouts of their choice. This project was done in a group of 3, however, this was my first hackathon and first time using any front-end language which made this project a great learning opportunity and allowed myself to learn how to work better with a team. Designed the models for routines and exercises while learning and understanding typescript syntax in a short period of time.",
+    "video": "https://github.com/alexcameron8/ACameron-Portfolio/raw/main/public/assets/Demos/Hercules_Demo.mp4",
+    "repositoryLink": "https://github.com/alexcameron8/hercules",
+    "image": "/assets/herc-proj.PNG"
+  }
+]
