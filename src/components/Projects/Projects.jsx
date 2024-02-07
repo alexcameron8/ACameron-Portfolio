@@ -4,7 +4,9 @@ import { FaArrowDown, FaArrowUp } from "react-icons/fa6";
 
 import "./projects.css";
 function fetchProjects() {
-  return fetch("./src/documents/projects.json")
+  return fetch(
+    "https://github.com/alexcameron8/ACameron-Portfolio/tree/main/public/documents/projects.json"
+  )
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
