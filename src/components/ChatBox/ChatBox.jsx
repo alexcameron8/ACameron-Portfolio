@@ -15,14 +15,13 @@ const conversations_data = [
   {
     message: "What are your hobbies? 🏸",
     answer:
-      "I love spending time being active, whether it's lifting weights at the gym or playing sports such as Ultimate frisbee!",
+      "I love spending time being active, whether it's working out at the gym or playing sports such as Ultimate frisbee!",
   },
   {
-    message: "What programming languages do you know? 👨‍💻",
+    message: "Know any programming languages? 👨‍💻",
     answer:
-      "Java, Python, Javascript, HTML, CSS, but check out my projects section to see all the different kinds of technologies I've used!",
+      "Java, Python & Javascript to name a few, but check out my projects below to see all the different kinds of technologies I've used!",
   },
-
   {
     message: "Let's play a game. 🎮",
     answer: "What game would you like to play?",
