@@ -50,6 +50,7 @@
 .a-social {
   color: inherit;
   text-decoration: none;
+  white-space: nowrap;
 }
 .a-social:visited {
   color: inherit; /* Inherit the color from the parent button */
@@ -85,6 +86,27 @@
   } /* Reset for the last half to pause */
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 1200px) {
+  .header-container h1 {
+    font-size: 5em;
+  }
+  .header-container h2 {
+    font-size: 2.2em;
+  }
+  .header-container h3 {
+    font-size: 1.75em;
+  }
+  .header-container p {
+    /* font-size: 1.2rem; */
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 900px) {
+  .header-container h1 {
+    font-size: 4em;
   }
 }
 @media (max-width: 500px) {
