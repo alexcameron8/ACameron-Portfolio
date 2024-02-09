@@ -53,6 +53,7 @@
   color: var(--text-low-color);
 }
 .about-tab.active {
+  outline: none;
   font-weight: bold;
   color: var(--text-med-color);
   border-color: #aaa;
