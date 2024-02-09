@@ -73,7 +73,9 @@ class HangmanGame {
       return { found: false };
     }
   }
-
+  setGameOver(isOver) {
+    this.isGameOver = isOver;
+  }
   // Function to check if the game is over
   checkGameOver() {
     if (!this.guessedWord.includes("_")) {

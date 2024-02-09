@@ -27,7 +27,7 @@ const conversations_data = [
     answer: "What game would you like to play?",
     games: [
       { name: "Hangman", enabled: true },
-      { name: "Trivia", enabled: false },
+      // { name: "Trivia", enabled: false },
     ],
   },
 ];
@@ -47,6 +47,7 @@ const default_message = [
 ];
 
 export function ChatBox() {
+  const num_hangman_rounds = 11;
   const [messages, setMessages] = useState(default_message);
   const [conversations, setConversations] = useState(conversations_data);
   const [resetFlag, setResetFlag] = useState(false);
@@ -83,14 +84,14 @@ export function ChatBox() {
     if (isGameMode) {
       if (activeGame === null) {
         if (message.message === "Hangman") {
-          setHangman();
+          setHangman("Hangman");
         } else {
           setActiveGame("trivia");
         }
       } else if (activeGame === "Hangman") {
         if (hangmanGame.isGameOver) {
           if (message.answer == "Play Again") {
-            setHangman();
+            setHangman("Play Again");
             hangmanGame.isGameOver = false;
             return;
           }
@@ -111,18 +112,17 @@ export function ChatBox() {
         const system_guess_result = {
           id: "id" + Math.random().toString(16).slice(2),
           type: "system",
-          text: `${hangmanGame.getIncorrectGuesses()}/11 ❌ Guesses  ${clicked_letter} was ${
+          text: `${hangmanGame.getIncorrectGuesses()}/${num_hangman_rounds} ❌ Guesses  ${clicked_letter} was ${
             result.found ? "Found" : "Not Found"
           }: `,
           isComplete: false,
         };
-
+        if (hangmanGame.getIncorrectGuesses() == num_hangman_rounds) {
+          hangmanGame.setGameOver(true);
+        }
         const system_hangman_update = {
           id: "id" + Math.random().toString(16).slice(2),
           type: "system",
-          // text: ` ${hangmanGame.getStatus().guessedWord.split("").join(" ")} (${
-          //   hangmanGame.getStatus().hangmanWord
-          // })`,
           text: ` ${hangmanGame.getStatus().guessedWord.split("").join(" ")}`,
           isComplete: false,
         };
@@ -142,6 +142,7 @@ export function ChatBox() {
             message: letter,
             answer: `guessLetter(${letter})`,
           }));
+
         setConversations(hangman_replies);
         if (hangmanGame.isGameOver) {
           if (message.answer == "Play Again") {
@@ -151,11 +152,11 @@ export function ChatBox() {
             resetMessages();
           }
           let system_hangman_verdict;
-          if (hangmanGame.getIncorrectGuesses == 11) {
+          if (hangmanGame.getIncorrectGuesses() === num_hangman_rounds) {
             system_hangman_verdict = {
               id: "id" + Math.random().toString(16).slice(2),
               type: "system",
-              text: ` You Lose!`,
+              text: ` You Lose! The word was: ${hangmanGame.hangmanWord}`,
               isComplete: false,
             };
           } else {
@@ -235,7 +236,7 @@ export function ChatBox() {
     handleToggleShrink(false);
   }
 
-  function setHangman() {
+  function setHangman(answer) {
     setActiveGame("Hangman");
     const newHangmanGame = new HangmanGame();
     setHangmanGame(newHangmanGame);
@@ -243,7 +244,7 @@ export function ChatBox() {
     const user_hangman = {
       id: "id" + Math.random().toString(16).slice(2),
       type: "user",
-      text: `Hangman`,
+      text: answer,
       isComplete: false,
     };
 
@@ -251,14 +252,11 @@ export function ChatBox() {
       id: "id" + Math.random().toString(16).slice(2),
       type: "system",
       isComplete: false,
-      text: `You have up to 11 incorrect guesses! Word to guess:`,
+      text: `You have up to ${num_hangman_rounds} incorrect guesses! Word to guess:`,
     };
     const hangman_message_2 = {
       id: "id" + Math.random().toString(16).slice(2),
       type: "system",
-      // text: ` ${newHangmanGame.getStatus().guessedWord.split("").join(" ")} (${
-      //   newHangmanGame.getStatus().hangmanWord
-      // })`, //development
       text: ` ${newHangmanGame.getStatus().guessedWord.split("").join(" ")}`,
       isComplete: false,
     };
@@ -279,10 +277,6 @@ export function ChatBox() {
       }));
     setConversations(hangman_replies);
   }
-
-  // function resetHangman() {
-  //   setActiveGame;
-  // }
 
   function handleToggleShrink(isTiny) {
     setIsShrunk(isTiny);
