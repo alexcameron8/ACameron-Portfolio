@@ -11,6 +11,12 @@
   margin-bottom: 2rem;
   padding-top: 4rem;
 }
+.bold {
+  font-weight: bold;
+}
+.underline {
+  text-decoration: underline;
+}
 
 .project-container {
   gap: 1rem;
