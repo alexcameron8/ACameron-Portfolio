@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Project } from "./Project";
+import { FeaturedProject } from "./FeaturedProject";
 import { FaArrowDown, FaArrowUp } from "react-icons/fa6";
 
 import "./projects.css";
@@ -87,9 +88,19 @@ export function Projects() {
   const handleSeeMoreClick = () => {
     setShowAllProjects((prev) => !prev);
   };
+
   return (
     <div className="projects-container" id="projects">
       <h1>Projects</h1>
+      <h2>Featured Capstone Project</h2>
+      <div className="featured-section">
+        {slicedProjects
+          ?.filter((project) => project.featured)
+          .map((project, index) => (
+            <FeaturedProject key={index} project={project} />
+          ))}
+      </div>
+      <h2>All Projects</h2>
       <div className="project-container">
         {slicedProjects?.map((project, index) => (
           <Project key={index} project={project} />

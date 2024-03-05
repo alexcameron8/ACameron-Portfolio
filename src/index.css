@@ -41,7 +41,7 @@ a {
   flex-direction: column;
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1400px) {
   .app {
     margin-left: 10rem;
     margin-right: 10rem;

@@ -48,6 +48,94 @@
   background: var(--bg-tag-color);
 }
 /* Project.jsx */
+.featured-section {
+  margin-bottom: 2rem;
+}
+.featured-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  border: 1px solid var(--text-low-color);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.project-featured {
+  display: flex;
+  flex-direction: row;
+}
+
+.featured-desc {
+  flex: 1;
+  padding-right: 2rem;
+  padding-left: 1rem;
+}
+
+.featured-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0.8;
+  padding-right: 1rem;
+}
+
+.featured-header h2 {
+  text-decoration: underline;
+  -webkit-text-decoration: underline; /* WebKit-specific property for iOS */
+}
+.project-video {
+  min-width: 500px;
+  min-height: 300px;
+  border-width: 0px;
+  border-radius: 1.5rem;
+  padding-top: 1rem;
+}
+.featured-header {
+  display: flex;
+  flex-direction: row;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.badge-wrapper {
+  margin-left: auto;
+}
+.project-badge {
+  width: 100px;
+  height: 100px;
+}
+.project-badge:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  background: var(--bg-tag-color);
+  border-radius: 10rem;
+}
+.demo-footer {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.featured-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 2rem;
+  padding-right: 1rem;
+}
+.desc-container {
+  display: flex;
+  flex-direction: column;
+}
+.desc-container p {
+  font-size: 1.2rem;
+}
+.featured-btn {
+  bottom: 0;
+  margin-bottom: auto;
+}
+
 .project-item {
   height: auto;
   display: flex;
@@ -163,9 +251,7 @@
   font-size: 1rem;
   text-decoration: none;
 }
-.a-deployment:visited {
-  /* color: var(--text--color); Inherit the color from the parent button */
-}
+
 .btn-gh {
   font-weight: bold;
   border: 1px solid var(--text-low-color);
@@ -205,10 +291,30 @@
   .project-container {
     grid-template-columns: auto auto;
   }
+  .desc-container p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1000px) {
+  .project-featured {
+    display: flex;
+    flex-direction: column;
+  }
+  .featured-desc {
+    padding-right: 0;
+  }
 }
 @media (max-width: 600px) {
   .project-container {
     grid-template-columns: auto;
+  }
+  .project-video {
+    min-width: 400px;
+    min-height: 300px;
+  }
+  .project-badge {
+    width: 70px;
+    height: 70px;
   }
 }
 @media (max-width: 500px) {
@@ -235,6 +341,10 @@
   }
   .btn-resize {
     font-size: 0.7rem;
+  }
+  .project-video {
+    min-width: 300px;
+    min-height: 200px;
   }
 }
 .skills-container {

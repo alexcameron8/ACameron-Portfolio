@@ -15,9 +15,6 @@ export function Project({ project }) {
   const toggleExpanded = () => {
     setExpanded(!expanded);
   };
-  const handleClick = (videoUrl) => {
-    window.open(videoUrl, "_blank");
-  };
 
   const limit = 150; // Limit for number of chars to display when not expanded
   if (project.deployment) isDeployed = true;

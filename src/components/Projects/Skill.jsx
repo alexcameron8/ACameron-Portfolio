@@ -10,6 +10,10 @@ import {
   SiDart,
   SiAppwrite,
   SiTypescript,
+  SiMongodb,
+  SiNextui,
+  SiExpress,
+  SiTailwindcss,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import { BiLogoSpringBoot } from "react-icons/bi";
@@ -100,6 +104,30 @@ const skills_list = [
     color: "rgba(70, 130, 180, 0.3)",
     logo: <SiTypescript />,
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+  },
+  {
+    name: "MongoDB",
+    color: "rgba(144, 238, 144, 0.3)",
+    logo: <SiMongodb />,
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+  },
+  {
+    name: "Express.js",
+    color: "rgba(70, 130, 180, 0.3)",
+    logo: <SiExpress />,
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
+  },
+  {
+    name: "TailwindCSS",
+    color: "rgba(70, 130, 180, 0.3)",
+    logo: <SiTailwindcss />,
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+  },
+  {
+    name: "NextUI",
+    color: "rgba(0, 128, 128, 0.3)",
+    logo: <SiNextui />,
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-plain.svg",
   },
   { name: "C", color: "rgba(0, 139, 139, 0.4)", logo: "" },
 ];
