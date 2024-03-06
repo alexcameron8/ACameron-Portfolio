@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, createRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Project } from "./Project";
 import { FeaturedProject } from "./FeaturedProject";
 import { FaArrowDown, FaArrowUp } from "react-icons/fa6";
@@ -82,7 +82,7 @@ export function Projects() {
     const h1Observer = new IntersectionObserver(handleH1Intersection, {
       root: null,
       rootMargin: "0px",
-      threshold: 0.5, // Triggers when 50% of the element is visible
+      threshold: 0.2, // Triggers when 50% of the element is visible
     });
     // Observing the h1 element
     if (h1Ref.current) {
@@ -95,7 +95,7 @@ export function Projects() {
       {
         root: null,
         rootMargin: "0px",
-        threshold: 0.5, // Triggers when 50% of the element is visible
+        threshold: 0.2, // Triggers when 50% of the element is visible
       }
     );
 

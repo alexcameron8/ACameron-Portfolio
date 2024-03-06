@@ -66,6 +66,29 @@
   color: var(--text-color);
   font-size: 1.5rem;
 }
+
+.visible {
+  opacity: 1;
+  transition: all 1s;
+}
+.hidden-left {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translatex(10%);
+  transition: all 1s;
+}
+.hidden-right {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translatex(-10%);
+  transition: all 1s;
+}
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
 @media (max-width: 1100px) {
   .about-p {
     font-size: 1.25rem;

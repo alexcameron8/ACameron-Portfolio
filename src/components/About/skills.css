@@ -32,12 +32,58 @@
   padding-bottom: 0.2rem;
   align-items: center;
 }
-
+.toolkit-item:nth-child(1) {
+  transition-delay: 200ms;
+}
+.toolkit-item:nth-child(2) {
+  transition-delay: 400ms;
+}
+.toolkit-item:nth-child(3) {
+  transition-delay: 600ms;
+}
+.toolkit-item:nth-child(4) {
+  transition-delay: 800ms;
+}
+.toolkit-item:nth-child(5) {
+  transition-delay: 1000ms;
+}
+.toolkit-item:nth-child(6) {
+  transition-delay: 1200ms;
+}
+.toolkit-item:nth-child(7) {
+  transition-delay: 1400ms;
+}
+.toolkit-item:nth-child(8) {
+  transition-delay: 1600ms;
+}
+.toolkit-item:nth-child(9) {
+  transition-delay: 1800ms;
+}
+.toolkit-item:nth-child(10) {
+  transition-delay: 2000ms;
+}
 .skill-icon {
   /* background-color: white; */
   width: 15px;
   height: 15px;
 }
+
+.visible {
+  opacity: 1;
+  transition: all 1s;
+}
+.hidden {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translatey(30%);
+  transition: all 1s;
+}
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
 @media (max-width: 900px) {
   .toolkit-list {
     width: 90%;

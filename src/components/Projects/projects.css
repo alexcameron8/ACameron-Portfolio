@@ -32,7 +32,36 @@
     transition: none;
   }
 }
-
+.project-item:nth-child(1){
+  transition-delay: 200ms;
+}
+.project-item:nth-child(2){
+  transition-delay: 400ms;
+}
+.project-item:nth-child(3){
+  transition-delay: 600ms;
+}
+.project-item:nth-child(4){
+  transition-delay: 800ms;
+}
+.project-item:nth-child(5){
+  transition-delay: 1000ms;
+}
+.project-item:nth-child(6){
+  transition-delay: 1200ms;
+}
+.project-item:nth-child(7){
+  transition-delay: 1400ms;
+}
+.project-item:nth-child(8){
+  transition-delay: 1600ms;
+}
+.project-item:nth-child(9){
+  transition-delay: 1800ms;
+}
+.project-item:nth-child(10){
+  transition-delay: 2000ms;
+}
 .project-container {
   gap: 1rem;
   display: grid;

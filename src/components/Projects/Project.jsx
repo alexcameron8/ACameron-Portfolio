@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import { FaGithub } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
@@ -15,12 +15,48 @@ export function Project({ project }) {
   const toggleExpanded = () => {
     setExpanded(!expanded);
   };
+  const [projectInView, setProjectInView] = useState(false);
+  const intersectionObserver = useRef(null);
+  const projectRef = useRef(null);
+  
+  useEffect(() => {
+    // Intersection observer callback function
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        // Never set back to false
+        setProjectInView(entry.isIntersecting);
+      });
+    };
+
+    // Creating the intersection observer instance
+    intersectionObserver.current = new IntersectionObserver(
+      handleIntersection,
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5, // Triggers when 50% of the element is visible
+      }
+    );
+
+    // Observing the featured section element
+    if (projectRef.current) {
+      intersectionObserver.current.observe(projectRef.current);
+    }
+
+    // Cleanup function
+    return () => {
+      // Disconnect the observer when the component unmounts
+      if (intersectionObserver.current) {
+        intersectionObserver.current.disconnect();
+      }
+    };
+  }, []);
 
   const limit = 150; // Limit for number of chars to display when not expanded
   if (project.deployment) isDeployed = true;
   return (
     <>
-      <div className="project-item">
+      <div ref={projectRef} className={`project-item ${projectInView ? "visible" : "hidden"}`}>
         <div
           className="project-image-container"
           onMouseEnter={() => setHover(true)}
