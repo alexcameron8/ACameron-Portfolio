@@ -12,7 +12,8 @@ body {
   /* background-color: rgb(17, 17, 17);
   color: rgb(255, 255, 255); */
   color: var(--text-color);
-  background-color: var(--bg-color);
+  /* background-color: var(--bg-color); */
+  background-color: var(--body-bg-color);
 }
 body::-webkit-scrollbar {
   width: 1em;

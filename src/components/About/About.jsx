@@ -1,17 +1,55 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { Skills } from "./Skills";
 import "./about.css";
 
 export function About({ isLight }) {
   const [tabIndex, setTabIndex] = useState(0);
+  const [aboutInView, setAboutInView] = useState(false);
+  const intersectionObserver = useRef(null);
+  const aboutRef = useRef(null);
+
+  useEffect(() => {
+    // Intersection observer callback function
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        if(!aboutInView && entry.isIntersecting){
+          setAboutInView(true);
+        }
+      });
+    };
+
+
+    // Creating the intersection observer instance
+    intersectionObserver.current = new IntersectionObserver(
+      handleIntersection,
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5, // Triggers when 50% of the element is visible
+      }
+    );
+
+    // Observing the featured section element
+    if (aboutRef.current) {
+      intersectionObserver.current.observe(aboutRef.current);
+    }
+
+    // Cleanup function
+    return () => {
+      // Disconnect the observer when the component unmounts
+      if (intersectionObserver.current) {
+        intersectionObserver.current.disconnect();
+      }
+    };
+  }, []);
 
   return (
     <div id="about" className="about-container">
       <h1>Want to learn more about me? Read below! </h1>
       <div className="about-bio">
-        <div className="tabs">
+        <div ref={aboutRef} className={`tabs ${aboutInView ? "visible" : "hidden-right"}`}>
           <Tabs
             selectedIndex={tabIndex}
             onSelect={(index) => setTabIndex(index)}
@@ -89,7 +127,7 @@ export function About({ isLight }) {
             </TabPanel>
           </Tabs>
         </div>
-        <div className="about-img">
+        <div className={`about-img ${aboutInView ? "visible" : "hidden-left"}`}>
           <img
             src={
               isLight

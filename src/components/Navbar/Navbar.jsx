@@ -10,6 +10,7 @@ export function Navbar({ isLight, handleToggleLightDarkMode }) {
     if (isLight) {
       root.style.setProperty("--text-color", "rgba(0, 0, 0, 0.87)");
       root.style.setProperty("--bg-color", "rgb(255, 255, 255)");
+      root.style.setProperty("--body-bg-color", "rgb(255, 255, 255)");
       root.style.setProperty("--text-med-color", "rgba(0, 0, 0, 0.5)");
       root.style.setProperty("--text-low-color", "rgba(0, 0, 0, 0.38)");
       root.style.setProperty("--bg-med-color", "rgb(255, 255, 255,0.8)");
@@ -17,6 +18,8 @@ export function Navbar({ isLight, handleToggleLightDarkMode }) {
       root.style.setProperty("--bg-disabled-color", "rgba(0, 0, 0, 0.1)");
     } else {
       root.style.setProperty("--bg-color", "rgb(17, 17, 17)");
+      // root.style.setProperty("--body-bg-color", "rgb(17, 17, 17)");
+      root.style.setProperty("--body-bg-color", "rgb(10, 7, 7)");
       root.style.setProperty("--text-color", "rgb(255, 255, 255)");
       root.style.setProperty("--text-med-color", "rgb(255, 255, 255,0.7)");
       root.style.setProperty("--text-low-color", "rgb(255, 255, 255,0.38)");
