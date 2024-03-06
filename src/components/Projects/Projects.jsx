@@ -71,12 +71,18 @@ export function Projects() {
     // Intersection observer callback function
     const handleIntersection = (entries) => {
       entries.forEach((entry) => {
-        setFeaturedInView(entry.isIntersecting);
+        if(!featuredInView && entry.isIntersecting){
+        setFeaturedInView(true);
+        }
       });
     };
     // Intersection observer callback function for h1 element
     const handleH1Intersection = (entries) => {
-      setIsH1InView(entries[0]?.isIntersecting);
+      entries.forEach((entry) => {
+        if(!isH1InView && entry.isIntersecting){
+          setIsH1InView(true);
+        }
+      });
     };
     // Intersection observer instance for h1 element
     const h1Observer = new IntersectionObserver(handleH1Intersection, {

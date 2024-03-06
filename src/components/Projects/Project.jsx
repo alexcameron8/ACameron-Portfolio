@@ -23,8 +23,9 @@ export function Project({ project }) {
     // Intersection observer callback function
     const handleIntersection = (entries) => {
       entries.forEach((entry) => {
-        // Never set back to false
-        setProjectInView(entry.isIntersecting);
+        if (!projectInView && entry.isIntersecting) {
+          setProjectInView(true);
+        }
       });
     };
 

@@ -41,12 +41,14 @@ export function Skills() {
   const [skillsInView, setSkillsInView] = useState(false);
   const intersectionObserver = useRef(null);
   const skillsRef = useRef(null);
-  
+
   useEffect(() => {
     // Intersection observer callback function
     const handleIntersection = (entries) => {
       entries.forEach((entry) => {
-        setSkillsInView(entry.isIntersecting);
+        if(!skillsInView && entry.isIntersecting){
+          setSkillsInView(true);
+        }
       });
     };
 

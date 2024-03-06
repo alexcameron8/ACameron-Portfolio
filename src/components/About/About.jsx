@@ -14,7 +14,9 @@ export function About({ isLight }) {
     // Intersection observer callback function
     const handleIntersection = (entries) => {
       entries.forEach((entry) => {
-        setAboutInView(entry.isIntersecting);
+        if(!aboutInView && entry.isIntersecting){
+          setAboutInView(true);
+        }
       });
     };
 
