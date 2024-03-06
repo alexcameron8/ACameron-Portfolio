@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, createRef } from "react";
 import { Project } from "./Project";
 import { FeaturedProject } from "./FeaturedProject";
 import { FaArrowDown, FaArrowUp } from "react-icons/fa6";
@@ -25,7 +25,12 @@ export function Projects() {
   const [currentBreakpoint, setCurrentBreakpoint] = useState(
     getCurrentBreakpoint()
   );
+  const [featuredInView, setFeaturedInView] = useState(false);
+  const [isH1InView, setIsH1InView] = useState(false);
 
+  const intersectionObserver = useRef(null);
+  const featuredRef = useRef(null);
+  const h1Ref = useRef(null);
   useEffect(() => {
     // Fetch projects data when the component mounts
     fetchProjects().then((data) => {
@@ -33,6 +38,7 @@ export function Projects() {
       setProjectsData(data);
     });
   }, []); // Empty dependency array to fetch data only once when the component mounts
+
   //Rerendering for different breakpoints for # of projects visible depending on grid layou
   useEffect(() => {
     const mediaQueryLists = {
@@ -60,6 +66,57 @@ export function Projects() {
       });
     };
   }, []);
+
+  useEffect(() => {
+    // Intersection observer callback function
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        setFeaturedInView(entry.isIntersecting);
+      });
+    };
+    // Intersection observer callback function for h1 element
+    const handleH1Intersection = (entries) => {
+      setIsH1InView(entries[0]?.isIntersecting);
+    };
+    // Intersection observer instance for h1 element
+    const h1Observer = new IntersectionObserver(handleH1Intersection, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5, // Triggers when 50% of the element is visible
+    });
+    // Observing the h1 element
+    if (h1Ref.current) {
+      h1Observer.observe(h1Ref.current);
+    }
+
+    // Creating the intersection observer instance
+    intersectionObserver.current = new IntersectionObserver(
+      handleIntersection,
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5, // Triggers when 50% of the element is visible
+      }
+    );
+
+    // Observing the featured section element
+    if (featuredRef.current) {
+      intersectionObserver.current.observe(featuredRef.current);
+    }
+
+    // Cleanup function
+    return () => {
+      // Disconnect the observer when the component unmounts
+      if (intersectionObserver.current) {
+        intersectionObserver.current.disconnect();
+      }
+      // Disconnect the observer when the component unmounts
+      if (h1Observer) {
+        h1Observer.disconnect();
+      }
+    };
+  }, []);
+
   // Helper function to determine the current breakpoint
   function getCurrentBreakpoint() {
     if (window.matchMedia("(max-width: 640px)").matches) {
@@ -91,9 +148,16 @@ export function Projects() {
 
   return (
     <div className="projects-container" id="projects">
-      <h1>Projects</h1>
-      <h2>Featured Capstone Project</h2>
-      <div className="featured-section">
+      <h1 ref={h1Ref} className={`${isH1InView ? "visible" : "hidden"}`}>
+        Projects
+      </h1>
+      <h2 className={`${featuredInView ? "visible" : "hidden"}`}>
+        Featured Capstone Project
+      </h2>
+      <div
+        className={`featured-section ${featuredInView ? "visible" : "hidden"}`}
+        ref={featuredRef}
+      >
         {slicedProjects
           ?.filter((project) => project.featured)
           .map((project, index) => (
@@ -102,9 +166,9 @@ export function Projects() {
       </div>
       <h2>All Projects</h2>
       <div className="project-container">
-        {slicedProjects?.map((project, index) => (
-          <Project key={index} project={project} />
-        ))}
+        {slicedProjects?.map((project, index) => {
+          return <Project key={index} project={project} />;
+        })}
       </div>
       {(extraProjects > 0 || showAllProjects) && (
         <div className="btn-expand-container">

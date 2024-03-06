@@ -17,6 +17,21 @@
 .underline {
   text-decoration: underline;
 }
+.visible {
+  opacity: 1;
+  transition: all 1s;
+}
+.hidden {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translatey(10%);
+  transition: all 1s;
+}
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
 
 .project-container {
   gap: 1rem;
