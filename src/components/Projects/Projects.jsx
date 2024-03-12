@@ -27,10 +27,13 @@ export function Projects() {
   );
   const [featuredInView, setFeaturedInView] = useState(false);
   const [isH1InView, setIsH1InView] = useState(false);
+  const [isMoreBtnInView, setIsMoreBtnInView] = useState(false);
 
   const intersectionObserver = useRef(null);
   const featuredRef = useRef(null);
   const h1Ref = useRef(null);
+  const seeMoreRef = useRef(null);
+
   useEffect(() => {
     // Fetch projects data when the component mounts
     fetchProjects().then((data) => {
@@ -71,29 +74,25 @@ export function Projects() {
     // Intersection observer callback function
     const handleIntersection = (entries) => {
       entries.forEach((entry) => {
-        if(!featuredInView && entry.isIntersecting){
-        setFeaturedInView(true);
+        if (!featuredInView && entry.isIntersecting) {
+          setFeaturedInView(true);
         }
-      });
-    };
-    // Intersection observer callback function for h1 element
-    const handleH1Intersection = (entries) => {
-      entries.forEach((entry) => {
-        if(!isH1InView && entry.isIntersecting){
+        if (
+          !isH1InView &&
+          entry.target === h1Ref.current &&
+          entry.isIntersecting
+        ) {
           setIsH1InView(true);
         }
+        if (
+          !isMoreBtnInView &&
+          entry.target === seeMoreRef.current &&
+          entry.isIntersecting
+        ) {
+          setIsMoreBtnInView(true);
+        }
       });
     };
-    // Intersection observer instance for h1 element
-    const h1Observer = new IntersectionObserver(handleH1Intersection, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.2, // Triggers when 50% of the element is visible
-    });
-    // Observing the h1 element
-    if (h1Ref.current) {
-      h1Observer.observe(h1Ref.current);
-    }
 
     // Creating the intersection observer instance
     intersectionObserver.current = new IntersectionObserver(
@@ -101,7 +100,7 @@ export function Projects() {
       {
         root: null,
         rootMargin: "0px",
-        threshold: 0.2, // Triggers when 50% of the element is visible
+        threshold: [0.2, 0.2, 0.1], // Triggers when 20% of the element is visible
       }
     );
 
@@ -110,18 +109,24 @@ export function Projects() {
       intersectionObserver.current.observe(featuredRef.current);
     }
 
+    // Observing the h1 element
+    if (h1Ref.current) {
+      intersectionObserver.current.observe(h1Ref.current);
+    }
+
+    // Observing the see more button element
+    if (seeMoreRef.current) {
+      intersectionObserver.current.observe(seeMoreRef.current);
+    }
+
     // Cleanup function
     return () => {
       // Disconnect the observer when the component unmounts
       if (intersectionObserver.current) {
         intersectionObserver.current.disconnect();
       }
-      // Disconnect the observer when the component unmounts
-      if (h1Observer) {
-        h1Observer.disconnect();
-      }
     };
-  }, []);
+  }, [featuredInView, isH1InView, isMoreBtnInView]);
 
   // Helper function to determine the current breakpoint
   function getCurrentBreakpoint() {
@@ -177,8 +182,13 @@ export function Projects() {
         })}
       </div>
       {(extraProjects > 0 || showAllProjects) && (
-        <div className="btn-expand-container">
-          <button className="see-more-btn" onClick={handleSeeMoreClick}>
+        <div
+          ref={seeMoreRef}
+          className={`btn-expand-container ${
+            isMoreBtnInView ? "visible" : "hidden-btn"
+          }`}
+        >
+          <button className={`see-more-btn`} onClick={handleSeeMoreClick}>
             {showAllProjects ? (
               <>
                 See Less&nbsp;
