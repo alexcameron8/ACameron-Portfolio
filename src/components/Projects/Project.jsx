@@ -18,7 +18,7 @@ export function Project({ project }) {
   const [projectInView, setProjectInView] = useState(false);
   const intersectionObserver = useRef(null);
   const projectRef = useRef(null);
-  
+
   useEffect(() => {
     // Intersection observer callback function
     const handleIntersection = (entries) => {
@@ -35,7 +35,7 @@ export function Project({ project }) {
       {
         root: null,
         rootMargin: "0px",
-        threshold: 0.5, // Triggers when 50% of the element is visible
+        threshold: 0.1, // Triggers when 50% of the element is visible
       }
     );
 
@@ -57,7 +57,10 @@ export function Project({ project }) {
   if (project.deployment) isDeployed = true;
   return (
     <>
-      <div ref={projectRef} className={`project-item ${projectInView ? "visible" : "hidden"}`}>
+      <div
+        ref={projectRef}
+        className={`project-item ${projectInView ? "visible" : "hidden"}`}
+      >
         <div
           className="project-image-container"
           onMouseEnter={() => setHover(true)}
