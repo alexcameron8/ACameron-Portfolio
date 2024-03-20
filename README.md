@@ -1,41 +1,62 @@
-# ACameron Portfolio
+# Alex's Portfolio Website
 
-## Ready Player Me Configuration Information
+Welcome to my personal portfolio website! This README provides an overview of the project structure, technologies used, and instructions for cloning and running the website locally.
 
-Avatar Library: https://docs.readyplayer.me/ready-player-me/
+## Table of Contents 📚
 
-Configuration guide: https://docs.readyplayer.me/ready-player-me/integration-guides/react/quickstart
+1. [Introduction](#introduction)
+2. [Features and Content](#features)
+3. [Technologies Used](#technologies-used)
+4. [Getting Started](#getting-started)
+5. [Contact](#contact)
 
-## Setup dev environment:
+## Introduction 🌟
+Welcome to my personal portfolio website! This website was crafted as part of my journey to teach myself React and front-end best practices while exploring diverse technologies. Serving as a centralized hub, this website showcases my software projects stemming from my academic endeavors, personal creations, and hackathons I have participated in. Here, you're offered a glimpse into my skills, experiences, and passion for technology. Explore, engage, and witness the culmination of my dedication to continuous learning and growth in the realm of web development.
 
-1. Install the react-avatar-creator package:
+## Features and Content 🚀
 
-   `npm i @readyplayerme/react-avatar-creator`
+Various features and content are included in my website and consist of the following:
 
-2. Install Visage package to render your avatar:
+- Responsive design for mobile and desktop views
+- Showcase of various highlighted projects
+- Resume/CV download
+- Integrations with social media & contact information
+- Text message style chat bot
+- Information about myself!
 
-   `npm i @readyplayerme/visage`
+(Avatar created with https://www.cartoonize.net/avatar-maker/)
 
-3. Install react.js
-   Three.js is a lightweight 3D library tool that allows advanced rendering in the web.
+## Technologies Used 💻
 
-   `npm install three`
+The following list of technologies, frameworks, and libraries were used in building my website:
 
-4. Install React-icons library
+- HTML
+- CSS
+- JavaScript
+- React.js
+- Github Actions Deployment
+- Git and GitHub for version control
 
-'npm install react-icons'
+## Getting Started 🏁
 
-5. Install react-tool-tip
+The following instructions are provided on how to set up the project locally:
 
-`npm install react-tooltip`
+1. Clone the repository: `git clone https://github.com/alexcameron8/ACameron-Portfolio.git`
+2. Install dependencies: `npm install`
+3. Start the development server: `npm run dev`
+4. Open your browser and navigate to `http://localhost:5173`
 
-6. Resize detector library
+## Contact 📧
 
-`npm install react-resize-detector`
+If you have any suggestions, feedback or you're just looking for someone to talk to, let's connect! 
 
-7. react-scroll library
 
-`npm install react-scroll`
+Email: alex8cameron@gmail.com
 
-Avatar created with:
-https://www.cartoonize.net/avatar-maker/
+LinkedIn: [Alex's LinkedIn Profile](https://www.linkedin.com/in/alexcameron8/)
+
+GitHub: [Alex's Github](https://github.com/alexcameron8)
+
+Website: [Alex's Personal Website](https://www.acameron.tech/)
+
+
