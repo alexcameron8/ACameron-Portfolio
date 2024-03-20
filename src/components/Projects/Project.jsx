@@ -67,25 +67,16 @@ export function Project({ project }) {
           onMouseLeave={() => setHover(false)}
         >
           <div className="project-demo-container">
-            {hover ? (
-              // <div className="project-vid">
-              <video
-                className="project-demo"
-                src={project.video}
-                type="video/mp4"
-                loop
-                autoPlay
-                controls
-                muted
-              />
-            ) : (
-              // </div>
-              <img
-                className="project-image"
-                src={project.image}
-                alt={project.title}
-              />
-            )}
+            <video
+              className="project-demo"
+              poster={project.image}
+              src={project.video}
+              type="video/mp4"
+              loop
+              controls={hover}
+              muted
+              autoPlay={hover}
+            />
           </div>
         </div>
         <div className="project-description-container">
