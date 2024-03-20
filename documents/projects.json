@@ -11,9 +11,10 @@
       "Express.js",
       "MongoDB",
       "TailwindCSS",
-      "NextUI"
+      "NextUI",
+      "Google Cloud Platform"
     ],
-    "description": "MERN Stack application using Tailwind CSS & NextUI for front end.",
+    "description": "Full Stack application designed for users to save & search for new recipes. Technologies used for front end development include React, Tailwind CSS, & NextUI. The database is hosted with MongoDB and additional data persistence is used with the Google Cloud Storage Platform.",
     "repositoryLink": "https://github.com/alexcameron8/recipe-finder",
     "video": "",
     "image": "/assets/recipe_icon.png",
