@@ -94,9 +94,10 @@
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   font-weight: bold;
+  border: 0.5px solid var(--text-low-color);
   /* justify-items: center; */
-  background-color: var(--text-color);
-  color: var(--bg-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 .see-more-btn:hover {
   cursor: pointer;
@@ -260,16 +261,16 @@
 .button-container {
   margin-top: auto;
   margin-bottom: 0.5rem;
-  padding: 2%;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
 .btn-deployment {
-  border: 1px outset #ff4742;
+  border: 1px solid var(--text-low-color);
   font-weight: bold;
   background: none;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
   font-size: 1.5rem;
   padding-top: 1.5%;
   padding-bottom: 1%;
@@ -278,17 +279,24 @@
   justify-items: start;
   color: var(--text-color);
   background: var(--bg-color);
+  width: 100%;
 }
 .btn-deployment:hover {
-  background-color: #ff4742;
+  border: 1px solid #ff4742;
+  color: #ff4742;
+  /* background-color: #ff4742; */
   cursor: pointer;
-  color: var(--text-color);
+  :focus {
+    color: #ff4742;
+  }
+  /* color: var(--text-color); */
+  transform: scaleX(1.05);
 }
 
 .btn-deployment-disabled {
   border: 1px solid var(--text-low-color);
   background: none;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
   font-size: 1.5rem;
   padding-top: 1.5%;
   padding-bottom: 1%;
@@ -298,6 +306,7 @@
   color: var(--text-low-color);
   /* background-color: rgba(255, 255, 255, 0.3); */
   background-color: var(--bg-disabled-color);
+  width: 100%;
 }
 .a-deployment {
   padding-bottom: 1%;
@@ -312,15 +321,16 @@
   font-weight: bold;
   border: 1px solid var(--text-low-color);
   background: none;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
   font-size: 1.5rem;
   background-color: var(--bg-color);
   color: var(--text-color);
   /* background-color: var(--text-low-color); */
+  width: 100%;
 }
 .btn-gh:hover {
   cursor: pointer;
-  transform: scale(1.01);
+  transform: scaleX(1.05);
   background: var(--bg-tag-color);
 }
 
